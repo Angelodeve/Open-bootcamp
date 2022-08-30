@@ -1,0 +1,87 @@
+import java . io . *;
+
+public class Main{
+
+public static void main(String args[]) throws IOException {
+
+ BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System . in));
+
+ String r;
+
+  int incremPuer;
+
+ incremPuer = 0;
+
+Coche miCoche = new Coche(incremPuer);
+
+ do {
+
+  do {
+
+   System.out.print("agregar puerta al coche? (s/n): ");
+
+   r = bufEntrada.readLine();
+
+   r = r.toLowerCase();
+
+  } while (!(r.equals("s") || r.equals("n")));
+
+  if (r.equals("s")) {
+
+ 
+
+       // crear objeto de clase coche
+   incremPuer=miCoche.puertas(incremPuer);
+//Enunciado del ejercicio:
+
+Primera parte:
+
+Crear una función con tres parámetros que sean números que se suman entre sí.
+
+Llamar a la función en el main y darle valores.
+
+Segunda parte:
+
+Crear una clase coche.
+
+Dentro de la clase coche, una variable numérica que almacene el número de puertas que tiene.
+
+Una función que incremente el número de puertas que tiene el coche.
+
+Crear un objeto miCoche en el main y añadirle una puerta.
+
+Mostrar el número de puertas que tiene el objeto.
+   
+
+    // Imprimir mensaje
+System.out.println("Número de puertas que tiene el objeto: "+incremPuer);
+
+  }
+
+ } while (!r.equals("n"));
+
+}
+
+}
+
+// clase Coche
+class Coche {
+
+//Operaciones incremento de puertas
+   int puertas;
+
+   //Constructor para Coche
+   Coche (int p) {
+
+puertas=p;
+
+}
+
+//Retornando valores
+   int puertas(int incremPuer){
+
+return incremPuer+1;
+
+   }
+
+   }
